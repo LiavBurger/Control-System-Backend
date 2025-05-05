@@ -2,9 +2,9 @@ name: NestJS API CI
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      
+
 
       # <database-document-block>
       - name: Run e2e tests for NestJS with Mongoose
@@ -24,8 +24,7 @@ jobs:
           --env-file env-example-document 
           -p ci-document 
           up 
-          --build 
-          --no-cache
+          --build
           --exit-code-from api
 
       - name: Copy prod.log from container to host

@@ -51,7 +51,6 @@ AWS_DEFAULT_S3_BUCKET=
 
 #WORKER_HOST=redis://redis:6379/1
 
-# --------------------------------------
 COGNITO_USER_POOL_ID=eu-north-1_dummyCiPoolId
 COGNITO_CLIENT_ID=dummyCiClientId
 COGNITO_REGION=eu-north-1

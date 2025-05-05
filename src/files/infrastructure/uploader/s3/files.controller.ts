@@ -13,7 +13,7 @@ import {
   ApiCreatedResponse,
   ApiTags,
 } from '@nestjs/swagger';
-import { AuthGuard } from '@nestjs/passport';
+import { CognitoAuthGuard } from '../../../../auth/guards/cognito-auth.guard';
 import { FilesS3Service } from './files.service';
 import { FileResponseDto } from './dto/file-response.dto';
 
@@ -29,7 +29,7 @@ export class FilesS3Controller {
     type: FileResponseDto,
   })
   @ApiBearerAuth()
-  @UseGuards(AuthGuard('jwt'))
+  @UseGuards(CognitoAuthGuard)
   @Post('upload')
   @ApiConsumes('multipart/form-data')
   @ApiBody({

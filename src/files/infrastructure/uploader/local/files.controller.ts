@@ -17,7 +17,7 @@ import {
   ApiExcludeEndpoint,
   ApiTags,
 } from '@nestjs/swagger';
-import { AuthGuard } from '@nestjs/passport';
+import { CognitoAuthGuard } from '../../../../auth/guards/cognito-auth.guard';
 import { FilesLocalService } from './files.service';
 import { FileResponseDto } from './dto/file-response.dto';
 
@@ -33,7 +33,7 @@ export class FilesLocalController {
     type: FileResponseDto,
   })
   @ApiBearerAuth()
-  @UseGuards(AuthGuard('jwt'))
+  @UseGuards(CognitoAuthGuard)
   @Post('upload')
   @ApiConsumes('multipart/form-data')
   @ApiBody({

@@ -18,7 +18,15 @@ jobs:
       # <database-document-block>
       - name: Run e2e tests for NestJS with Mongoose
         id: document
-        run: docker compose -f docker-compose.document.ci.yaml --env-file env-example-document -p ci-document up --build --exit-code-from api
+        run: >
+          docker compose 
+          -f docker-compose.document.ci.yaml 
+          --env-file env-example-document 
+          -p ci-document 
+          up 
+          --build 
+          --no-cache
+          --exit-code-from api
 
       - name: Copy prod.log from container to host
         if: ${{ failure() && steps.document.conclusion == 'failure' }}

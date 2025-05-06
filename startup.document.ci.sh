@@ -25,4 +25,4 @@ echo "--- Running Lint ---"
 npm run lint
 
 echo "--- Running E2E Tests ---"
-npm run test:e2e -- --runInBand
+npm run test:e2e:ci

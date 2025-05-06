@@ -14,12 +14,12 @@ DATABASE_PASSWORD=secret
 DATABASE_NAME=api
 DATABASE_URL=mongodb://mongo:27017
 
-# Support "local", "s3", "s3-presigned"
-FILE_DRIVER=local
-ACCESS_KEY_ID=
-SECRET_ACCESS_KEY=
-AWS_S3_REGION=
-AWS_DEFAULT_S3_BUCKET=
+## Support "local", "s3", "s3-presigned"
+#FILE_DRIVER=local
+#ACCESS_KEY_ID=
+#SECRET_ACCESS_KEY=
+#AWS_S3_REGION=
+#AWS_DEFAULT_S3_BUCKET=
 
 #MAIL_HOST=maildev
 #MAIL_PORT=1025

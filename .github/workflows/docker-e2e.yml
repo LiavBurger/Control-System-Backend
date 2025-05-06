@@ -22,7 +22,7 @@ jobs:
           docker compose 
           -f docker-compose.document.ci.yaml 
           --env-file env-example-document 
-          -p ci-document 
+          -p control-system-backend-ci 
           up 
           --build
           --exit-code-from api
